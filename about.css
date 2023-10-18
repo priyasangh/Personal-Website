@@ -1,0 +1,263 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background: rgb(29, 28, 28);
+    color: rgb(243, 236, 229);
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{ 
+    padding: 30px 5%;
+}
+
+nav {
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(205, 239, 255);
+    position: absolute;
+    left: 0; 
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.introduction {
+    margin-top: 20%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.introduction h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+#about { 
+    padding: 80px 80px;
+    color: rgb(205, 239, 255);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image {
+    
+    flex-basis: 35%;
+}
+
+.image img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.image {
+    flex-basis: 35%;
+}
+
+.info {
+    flex-basis: 55%;
+}
+
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    padding-bottom: 20px;
+    
+}
+
+.tabs {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(184, 238, 187);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.4s;
+
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: rgb(184, 238, 187);
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: flex;
+}
+
+#portfolio{
+    padding: 30px 0;
+}
+
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project-list div{
+    background:rgb(184, 238, 187);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    color: black;
+    border-radius: 30px;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+.project-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.project-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.project-list div:hover{
+    background-color:rgb(205, 239, 255);
+    transform: translateY(-10px);
+}
+
+.form{
+    flex-basis: 50%;
+}
+.contact-info{
+    flex-basis: 40%;
+}
+
+.contact-info p{
+    margin-top: 30px;
+}
+.contact-info p i{
+    color: rgb(205, 239, 255);
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.socials{
+    margin-top: 30px;
+}
+
+.socials a{
+    text-decoration: none;
+    font-size:24px;
+    color:rgb(184, 238, 187);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.socials a:hover{
+    color: rgb(205, 239, 255);
+    transform: translateY(-5px);
+}
+
+.button {
+    background-color: rgb(184, 238, 187);
+    color: black; 
+    font-weight: 500;
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s;
+    margin-top: 40px;
+}
+
+.button:hover {
+    background-color: rgb(205, 239, 255);
+}
+
+.form form{
+    width: 100%
+}
+
+form textarea, form input{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(85, 84, 84);
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+}

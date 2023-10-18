@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Personal Website</title>
+        <link rel = 'stylesheet' href = "contact.css">
+        <script src="https://kit.fontawesome.com/ce1f9ff7ec.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id = 'header'>
+            <div class = 'container'>
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "about.html">About</a></li>
+                        <li><a href = "projects.html">Projects</a></li>
+                        <li><a href = "Resume .pdf">Resume</a></li>
+                        <li><a href = "contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div id = 'contact'>
+            <div class = 'container'>
+                <div class = "row">
+                    <div class = 'form'>
+                        <form name = 'submit-to-google-sheet'>
+                            <input type = "text" name = "Name" placeholder="Your Name" required>
+                            <input type = "email" name = "email" placeholder="Your Email" required>
+                            <textarea name = "Message" rows = "6" placeholder="Your Message"></textarea>
+                            <button type = "submit" class = "button">Submit</button>
+                        </form>
+                        <span id = "msg"></span>
+                    </div>
+                    <div class = "contact-info">
+                        <h1 class = "subtitle">Contact Me</h1>
+                        <p><i class="fa-regular fa-envelope"></i>priyankasanghrajka@gmail.com</p>
+                        <p><i class="fa-regular fa-envelope"></i>priyankasanghrajka@berkeley.edu</p>
+                        <div class = "socials">
+                            <a href = "https://www.instagram.com/priyanka_sangh/"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwK081ubR6RWW-bnp7B4O-MlQgeO1kJny1qztyri-42tHfdPjn7mo8FpfNpBSj2BOwdWA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 2000)
+                    form.reset()
+                    })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    </body>
+</html>

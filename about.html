@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Personal Website</title>
+        <link rel = 'stylesheet' href = "about.css">
+        <script src="https://kit.fontawesome.com/ce1f9ff7ec.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id = 'header'>
+            <div class = 'container'>
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "about.html">About</a></li>
+                        <li><a href = "projects.html">Projects</a></li>
+                        <li><a href = "Resume .pdf">Resume</a></li>
+                        <li><a href = "contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+        </div>
+        <div id = 'about'>
+            <div class = 'container'>
+                <div class = 'row'>
+                    <div class = "image">
+                        <img src = 'logo.JPG'>
+                    </div>
+                    <div class = "info">
+                        <h1 class = 'subtitle'>About Me</h1>
+                        <p>Hello all! My name is Priyanka Sanghrajka, and I am a junior at the University
+                            of California Berkeley. I am currently studying Data Science with an Emphasis 
+                            in Computational Methods in Molecular and Genomic Biology. Learn more: 
+                        </p>
+
+                        <div class = 'tabs'>
+                            <p class = 'tab-links active-link' onclick = "selecttab('education')">Education</p>
+                            <p class = 'tab-links' onclick = "selecttab('skills')">Skills</p>
+                            <p class = 'tab-links' onclick = "selecttab('hobbies/interests')">Hobbies/Interests</p>
+                        </div>
+                        <div class = 'tab-contents active-tab' id = 'education'>
+                            <ul>
+                                <li><span>CS61A</span><br>The Structure and Interpretation of Computer Programs</li>
+                                <li><span>CS61B</span><br>Data Structures and Algorithms</li>
+                                <li><span>Data 8</span><br>Foundations of Data Science</li>
+                                <li><span>Data 100</span><br>Principles & Techniques of Data Science</li>
+                                <li><span>Data 140</span><br>Probability for Data Scienc</li>
+                                <li><span>Data 104</span><br>Human Contexts and Ethics of Data</li>
+                                <li><span>Data 101</span><br>Data Engineering</li>
+                                <li><span>Data 144</span><br>Data Mining and Analytics</li>
+                                <li><span>CS198</span><br>Full Stack Web Development</li>
+                                <li><span>Math 54</span><br>Linear Algebra and Differential Equations</li>
+                                <li><span>Bio1A/1B/1AL/1BL</span><br>General Biology and Labratory</li>
+                                <li><span>Chem1A/1AL</span><br>General Chemistry and Labratory</li>
+                                <li><span>Integbi164</span><br>Human Genetics and Genomics</li>
+
+                            </ul>
+                        </div>
+                        <div class = 'tab-contents' id = 'skills'>
+                            <ul>
+                                <li><span>Python</span><br>Scikit-learn, NumPy, Pandas, Matplotlib </li>
+                                <li><span>Java</span><br></li>
+                                <li><span>SQL</span><br>PostgreSQL, MongoDB</li>
+                                <li><span>Java Script</span><br>React</li>
+                                <li><span>HTML</span><br></li>
+                                <li><span>CSS</span><br></li>
+                                <li><span>Collaboration</span><br></li>
+                                <li><span>Leadership</span><br></li>
+                                <li><span>Communication</span><br></li>
+                                <li><span>Empathy</span><br></li>
+
+
+                            </ul>
+                        </div>
+                        <div class = 'tab-contents' id = 'hobbies/interests'>
+                            <ul>
+                                <li><span>Dance</span><br>Bollywood, Hip-Hop, Contemporary, Bhangra, Kathak</li>
+                                <li><span>Crocheting</span><br></li>
+                                <li><span>Traveling</span><br>Iceland, Scotland, Portugal, Spain, and many more!</li>
+                                <li><span>Board Games</span><br>Codenames, Catan, Avalon, Monopoly, etc.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontents = document.getElementsByClassName("tab-contents")
+
+            function selecttab(about_tab) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(about_tab).classList.add("active-tab");
+            }
+
+        </script>
+    </body>
+</html>

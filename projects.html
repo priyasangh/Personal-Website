@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Personal Website</title>
+        <link rel = 'stylesheet' href = "projects.css">
+        <script src="https://kit.fontawesome.com/ce1f9ff7ec.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id = 'header'>
+            <div class = 'container'>
+                <nav>
+                    <ul>
+                        <li><a href = "index.html">Home</a></li>
+                        <li><a href = "about.html">About</a></li>
+                        <li><a href = "projects.html">Projects</a></li>
+                        <li><a href = "Resume .pdf">Resume</a></li>
+                        <li><a href = "contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+        <div id = 'projects'>
+            <div class = 'container'>
+                <div class="project-list">
+                    <div>
+                        <i class="fa-brands fa-forumbee"></i>
+                        <h2>Ants vs. SomeBees Game</h2>
+                        <br>
+                        <p>Designed a robust tower defense game to understand game dynamics and user interation.
+                            <br>
+                            <br>Leveraged Python and incorporated both object-oriented and functional programming paradigms.</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-quote-right"></i>
+                        <h2>NGordnet</h2>
+                        <br>
+                        <p>Developed a user-friendly browser tool aimed at exploring linguistic patterns in Historical English
+                            Texts. 
+                            <br>
+                            <br>Implemented using Java, drawing inspiration from Google Books NGram Viewer.</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-gamepad"></i>
+                        <h2>Build your Own World</h2>
+                        <br>
+                        <p>Construted a 2D tile-based game engine, focusing on random world generation and user interactivity.
+                             <br>
+                             <br>Utilized Java with a special emphasis on data algorithms. Delivered an interactive GUI, integrated keyboard
+                             input mechanics, implemented save/load structure, and provided avatar custimization options.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links")
+            var tabcontents = document.getElementsByClassName("tab-contents")
+
+            function opentab(about_tab) {
+                for(tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(about_tab).classList.add("active-tab");
+            }
+
+        </script>
+    </body>
+</html>
